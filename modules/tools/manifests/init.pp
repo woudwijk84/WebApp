@@ -2,10 +2,12 @@ class tools {
 
   # package install list
   $packages = [
-    "curl",
+#    "curl",
     "vim",
     "htop",
-    "wget"
+    "wget",
+    "git",
+    "expect"
   ]
 
   # install packages

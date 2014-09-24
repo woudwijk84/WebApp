@@ -16,9 +16,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 		
 	# Enable the puppet provisioner, which will look in manifests
 	config.vm.provision :puppet do |puppet|
+
 		puppet.manifests_path = "manifests"
 		puppet.manifest_file = "default.pp"
 		puppet.module_path = "modules"
+#		puppet.options = ['--verbose --debug']
 	end
   
   # Every Vagrant virtual environment requires a box to build off of.
@@ -27,6 +29,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 	# Forward guest port 80 to host port 8888 and name mapping
 	config.vm.network :forwarded_port, guest: 80, host: 8888
 	
-	config.vm.synced_folder "./", "/vagrant", :owner => "www-data"
+	config.vm.synced_folder "./", "/vagrant", :owner => "www-data", group: "vagrant"
   
 end
