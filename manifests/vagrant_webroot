@@ -1,0 +1,11 @@
+<VirtualHost *:80>
+	ServerName dev-belasting
+	DocumentRoot /vagrant/www
+	<Directory /vagrant/www>
+		DirectoryIndex index.php index.html
+		AllowOverride All
+		Order allow,deny
+		Allow from all
+	</Directory>
+</virtualHost>
+

@@ -1,0 +1,7 @@
+vagrant
+.vagrant
+.idea
+webroot
+.DS_Store
+./www/*
+www/*
