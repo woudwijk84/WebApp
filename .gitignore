@@ -4,4 +4,3 @@ vagrant
 webroot
 .DS_Store
 ./www/*
-www/*
